@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="jvillaltaExamen.Views.Registro"
+             Title="Registro">
+    <VerticalStackLayout>
+       
+        
+        <Label x:Name="lblUsuario" 
+        FontSize="16"
+        TextColor="Red"
+        HorizontalTextAlignment="End"/>
+
+
+       
+
+        <Label 
+Text="REGISTRO"
+VerticalOptions="Center" 
+HorizontalOptions="Center"
+FontSize="24"
+TextColor="Black"/>
+        
+
+        <Label Text="Fecha" />
+        <DatePicker x:Name="dFechas" />
+        
+        <Picker x:Name="paisPicker" Title="PAIS">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Colombia</x:String>
+                    <x:String>Ecuador</x:String>
+                    <x:String>Perú</x:String>
+                   
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker x:Name="ciudadPicker" Title="CIUDAD">
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Piura</x:String>
+                    <x:String>Quito</x:String>
+                    <x:String>Barranquilla</x:String>
+
+                </x:Array>
+            </Picker.ItemsSource>
+            
+        </Picker>
+        
+        <Label Text="Monto inicial" />
+        <Entry x:Name="txtMonto" 
+             Keyboard="Numeric" 
+                Completed="OnMontoCompleted"
+               />
+        
+        <Button x:Name="btnCalcular"
+                Text="Calcular pago inicial" 
+                 Clicked="btnCalcular_Clicked"/>
+        
+                        
+
+
+        
+
+
+
+
+        <Label Text="Nombre" />
+        <Entry x:Name="txtNombres"
+       Keyboard="Text" />
+        
+        <Label Text="Apellido" />
+        <Entry x:Name="txtApellidos"
+         Keyboard="Text" />
+
+
+        <Label Text="Edad" />
+        <Entry x:Name="txtedad"
+         Keyboard="Numeric" />
+
+
+        <Button x:Name="btnResumen"
+        Text="Resumenl" 
+         Clicked="btnResumen_Clicked"/>
+
+
+
+    </VerticalStackLayout>
+</ContentPage>
